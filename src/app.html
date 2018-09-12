@@ -1,0 +1,14 @@
+<template>
+    <h1 t="[prepend]helloWorld">!</h1>
+    <p>Language:</p>
+    <ul style="list-style-type: none;">
+        <li repeat.for="locale of locales">
+            <input type="radio" id="locale${$index}" name="locale" value.bind="locale.key" autocomplete="off" checked.bind="currentLocale">
+            <label for="locale${$index}" textcontent.bind="locale.label"></label>
+        </li>
+    </ul>
+    <p>
+        It works now. In order to break, please comment-out the line #50 in the <em>src/main.ts</em> file:
+        <pre>50:       load: "currentOnly",</pre>
+    </p>
+</template>
